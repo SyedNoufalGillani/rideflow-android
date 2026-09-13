@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. Compose supplies all real theming (see
+         core:designsystem's RideFlowTheme); this XML theme only exists to
+         satisfy the platform window/launch requirements before the first
+         Compose frame is drawn. -->
+    <style name="Theme.RideFlow" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <!-- Applied to MainActivity only, so the platform SplashScreen API has a
+         window background to animate out of before RideFlowTheme takes over. -->
+    <style name="Theme.RideFlow.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@android:color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="postSplashScreenTheme">@style/Theme.RideFlow</item>
+    </style>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pre-Android 12 backup rules. RideFlow has no sensitive credentials to
+     exclude beyond the session DataStore, which is fine to restore since
+     the fake auth flow issues a fresh demo session on next login anyway. -->
+<full-backup-content>
+    <include domain="sharedpref" path="." />
+</full-backup-content>
